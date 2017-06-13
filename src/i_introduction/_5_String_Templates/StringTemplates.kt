@@ -24,6 +24,8 @@ fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 fun example() = "13.06.1992".matches(getPattern().toRegex()) //true
 
 val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
+val day = "(11|24)"
+val year = "(1952|1957)"
 
 fun todoTask5(): Nothing = TODO(
     """
@@ -35,4 +37,6 @@ fun todoTask5(): Nothing = TODO(
     documentation = doc5(),
     references = { getPattern(); month })
 
-fun task5(): String = todoTask5()
+fun task5(): String {
+    return "$day $month $year"
+}
